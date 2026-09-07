@@ -1,0 +1,126 @@
+{
+  "artifact_type": "current_hhvbp_report_bundle_manifest",
+  "artifacts": [
+    {
+      "bytes": 1413,
+      "path": "README.md",
+      "sha256": "e5cfcae8c2c5b1652332569c5f6ba00d11c8f7cddc5c8aaaf653dfa2b997ac70"
+    },
+    {
+      "bytes": 3294,
+      "path": "current_model_report.md",
+      "sha256": "67e85490775dda9908f853a66bb03a831f5474df1dfbd1da592d27f1dc775f4f"
+    },
+    {
+      "bytes": 3380,
+      "path": "nontechnical_report.md",
+      "sha256": "5a74dfdbfa50828e08c7561ef75865511bdba8ed53dc8cf5ad7ce2ce91884598"
+    },
+    {
+      "bytes": 31623,
+      "path": "reno_age_sensitivity.csv",
+      "sha256": "078249ae7086c5d0a1cb080947bb6ab17e7fcbcba31d1e735bc2081e1f3a5258"
+    },
+    {
+      "bytes": 91655,
+      "path": "reno_age_sensitivity.json",
+      "sha256": "b9ec29270472ac4adb2246a3d9323bb4929276d3bee2a43d3aabaa85978498ce"
+    },
+    {
+      "bytes": 6913,
+      "path": "reno_age_sensitivity_report.md",
+      "sha256": "010ab67600d153ee62a1dbab9f16d027aa89e48eb0149ebb4ad4a37d7f845a21"
+    },
+    {
+      "bytes": 12991,
+      "path": "reno_other_metrics_report.md",
+      "sha256": "7ca1740843cc1951204858cfce0cb8891d9cdeeeeafbfba2912c251b77e37093"
+    },
+    {
+      "bytes": 57188,
+      "path": "reno_other_metrics_scenarios.csv",
+      "sha256": "33b2b16dfce9ae16a85af856e677536a5dc077e82fb13337f57e62f08a3a99fc"
+    },
+    {
+      "bytes": 164309,
+      "path": "reno_other_metrics_scenarios.json",
+      "sha256": "4afe6a06c7c9a604385dbb3f2fc32e9f489ce3fc52124eebdb1b3f53a1932371"
+    },
+    {
+      "bytes": 3409,
+      "path": "reno_pph_report.md",
+      "sha256": "30e060951fab47a97931ed720bb988cf8554ff595999ea58b98696c31a1652c6"
+    },
+    {
+      "bytes": 7110,
+      "path": "reno_pph_scenarios.csv",
+      "sha256": "fe7aaf5421a44b7052ee871b342dede1980495e3d473b195dabee2f073e56c12"
+    },
+    {
+      "bytes": 19821,
+      "path": "reno_pph_scenarios.json",
+      "sha256": "fb8b3ba818bfa0c15540ca1f8a93f56d73a2807c63ec08ee9243ff8b38ee3c81"
+    },
+    {
+      "bytes": 3257,
+      "path": "sponsor_report.md",
+      "sha256": "be7c71305421d233c705a229c2e0d64d933ffcb8969ca1769aff5a8c2024043e"
+    }
+  ],
+  "generated_at_utc": "2026-07-15T00:00:00Z",
+  "generator_version": "1.2.0",
+  "latex_generated": false,
+  "model_lock": {
+    "cms_model": "Expanded HHVBP",
+    "cms_version_locked": true,
+    "measure_set_version": "CY2025",
+    "payment_year": 2027,
+    "performance_year": 2025
+  },
+  "pdf_generated": true,
+  "pdf_generated_at_utc": "2026-07-15T13:49:16.253348+00:00",
+  "pdf_link_status": "current",
+  "pdf_manifest_file_sha256": "798388ed626d8dd77b1c75e1409769f9a1810d4126678ebf39975815456ebade",
+  "pdf_manifest_identity_sha256": "baca156ac36616912628df6805397eb9e5f9b8daaaea81585b24fb9f1df79684",
+  "pdf_manifest_path": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\pdf_manifest.json",
+  "pdf_or_latex_generated": true,
+  "pdf_report_count": 6,
+  "pdf_source_bundle_identity_sha256": "efde6c1422b85b451c72a614f2748d18fec523599b0c17a7be7a198dd3f08b1a",
+  "pdf_source_manifest_sha256_before_link": "5f15bb7752f8b2c736ff24aaf66a808769d82da65103b877b8456d33c0ec9cd7",
+  "schema_version": "1.0",
+  "source_sha256": {
+    "config\\assignment_parameters.json": "4c1271281a12cf8325a8796acfae821bcbc8b595c0e229589b9069340ee68a2d",
+    "config\\hhvbp_global_config.json": "b235263936ecea6237fb0d8e49eb61c3f960f20a1501fde09b6e9bf6f0b4ea6c",
+    "config\\metric_parameter_library.json": "dfabe8fa158675ca59eab994cc50bde7c94ce3b9529c054a7f4fd87cca55db1c",
+    "config\\public_semi_synthetic_dataset_config.json": "0770bd35a17a55330534fd4bb2fe3df5da4e39813e5a0ce4e6c02371306f5401",
+    "data\\reference\\hhvbp_risk_reference.json": "cbf45ed1f434188c0ec622b3e8b1983f21528a0686ef0e0e3f7d993e45973d9f",
+    "reports\\experiments\\major_scenarios_5000\\experiment_metadata.json": "8cff37028bdae6395b056a9f233c68b24e5470d1b425658270c888409a26bc6d",
+    "reports\\experiments\\major_scenarios_5000\\policy_threshold_results.csv": "2a352ae96a6f5d4903011b956bdbb1d07dc8bb66bddcd137cada1ecab49e9063",
+    "reports\\experiments\\operational_stress_grid\\experiment_metadata.json": "304dec03c9bf835222e58c31e92db8735fca3c09c57c14116ccabd94cf90ab9b",
+    "reports\\experiments\\operational_stress_grid\\policy_threshold_results.csv": "f409a14c1fcf44b0547364e4ef8055e30006147ad2a52cb00a463054b287fcfa",
+    "reports\\experiments\\policy_bakeoff\\experiment_metadata.json": "4680bec36308d1d0279787aef5b0a121f521fb756963dedfef47d7380d9c0f51",
+    "reports\\experiments\\policy_bakeoff\\policy_threshold_results.csv": "c75b3f353e7eb8c767adbb0b0cb002a2fa20a4c33d65d01e66a2240a44c99f59",
+    "reports\\experiments\\structural_audit\\experiment_metadata.json": "4609b85b8421d7e792eb19d7bec8dc628ca5517e1d49bc6360d7039a41290cac",
+    "reports\\experiments\\structural_audit\\structural_diagnostics.json": "2277d1df463534757bb4056b6304d2a3021b7552da1987ce9d2119c525b4fcf7",
+    "reports\\experiments\\threshold_fine_grid\\experiment_metadata.json": "90b3690456efa5fc74b9ac9cdb7e77e6aae87fb03bde84d9f025c552fc99f882",
+    "reports\\experiments\\threshold_fine_grid\\threshold_recommendations.json": "c59937b8e088d75e593079fafcdd42e7b876759d9ad0a62be180eff5601fe282",
+    "reports\\experiments\\threshold_fine_grid\\threshold_summary.csv": "84742574cf396bcfa85491cd54c86aa0158ef2fe156e202262be528a0a046db1"
+  },
+  "threshold_provenance": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+  "unsupported_claim_scan": {
+    "files_scanned": 13,
+    "finding_count": 0,
+    "rule_ids": [
+      "guaranteed_improvement",
+      "payment_maximization",
+      "patient_outcome_benefit",
+      "real_world_optimality",
+      "causal_clinician_effect",
+      "sponsor_data_validation",
+      "empirical_reno_prediction",
+      "stale_six_factor_wording"
+    ],
+    "status": "passed"
+  },
+  "validation_boundary": "Public-data-only, expert-configured, semi-synthetic, simulation-based, and not outcome-validated."
+}

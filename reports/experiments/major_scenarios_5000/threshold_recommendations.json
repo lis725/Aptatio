@@ -1,0 +1,19 @@
+{
+  "evaluated_thresholds": [
+    0.75
+  ],
+  "held_out_evaluation_performed": false,
+  "held_out_evaluation_seeds": [],
+  "interpretation": "Fixed-threshold evaluation only; threshold optimization was not evaluated.",
+  "policy": "P4",
+  "production_demo_threshold": 0.75,
+  "production_threshold_changed": false,
+  "robust_max_regret": null,
+  "robust_minimax_regret_threshold": null,
+  "scenario_specific_best_thresholds": {},
+  "selection_seeds": [
+    0
+  ],
+  "threshold_optimization_evaluated": false,
+  "threshold_source": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated"
+}

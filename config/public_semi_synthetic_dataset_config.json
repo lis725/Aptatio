@@ -1,0 +1,71 @@
+{
+  "mode": "offline_demo_fallback",
+  "seed": 20260608,
+  "creation_timestamp_utc": "2026-07-15T00:00:00+00:00",
+  "num_synthetic_episodes": 10000,
+  "num_structural_grid_profiles": 2160,
+  "roster_size_by_discipline": {
+    "RN": 12,
+    "PT": 10,
+    "OT": 3
+  },
+  "routing": {
+    "risk_threshold": 0.75,
+    "risk_threshold_percentile": 0.75,
+    "threshold_source": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+    "production_validated": false
+  },
+  "market": {
+    "name": "Reno/Sparks public demo market",
+    "state": "NV",
+    "office_zip": "89501",
+    "service_zips": []
+  },
+  "fallback_distributions": {
+    "age_group": {
+      "age_40_50": 0.08,
+      "age_50_60": 0.17,
+      "age_60_70": 0.27,
+      "age_70_80": 0.3,
+      "age_80_plus": 0.18
+    }
+  },
+  "service_radius_miles_by_area_type": {
+    "RN": {
+      "metropolitan": 16,
+      "micropolitan": 22,
+      "small_town": 35,
+      "rural": 45
+    },
+    "PT": {
+      "metropolitan": 18,
+      "micropolitan": 25,
+      "small_town": 38,
+      "rural": 48
+    },
+    "OT": {
+      "metropolitan": 22,
+      "micropolitan": 30,
+      "small_town": 44,
+      "rural": 55
+    }
+  },
+  "quality_distribution_config": {
+    "mean": 0.76,
+    "sd": 0.08,
+    "public_cms_agency_baseline_note": "Fallback demo baseline; replace from public CMS Provider Data Catalog manifest when available."
+  },
+  "synthetic_outcome_model": {
+    "risk_effect": 0.14,
+    "clinician_quality_effect": 0.16,
+    "zip_continuity_effect": 0.025,
+    "noise_sd": 0.035
+  },
+  "metadata": {
+    "synthetic_data": true,
+    "public_data_only": true,
+    "threshold_source": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+    "production_validated": false,
+    "warning": "This configuration is for public-only demo/sensitivity analysis and is not historical validation."
+  }
+}

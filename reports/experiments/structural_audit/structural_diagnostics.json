@@ -1,0 +1,59 @@
+{
+  "age_health_double_counting_interaction": false,
+  "age_health_joint_weight": 0.5321920219865635,
+  "age_health_note": "Age and health are separate additive configured signals; causal overlap cannot be identified from synthetic data.",
+  "anchors": {
+    "anchor_rank_pool_10": {
+      "bottom_profiles": 139,
+      "middle_profiles": 622,
+      "reachable_ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "top_1_profiles": 243,
+      "top_3_profiles": 766,
+      "unreachable_ranks": []
+    },
+    "anchor_rank_pool_3": {
+      "bottom_profiles": 527,
+      "middle_profiles": 939,
+      "reachable_ranks": [
+        1,
+        2,
+        3
+      ],
+      "top_1_profiles": 694,
+      "top_3_profiles": 2160,
+      "unreachable_ranks": []
+    },
+    "anchor_rank_pool_5": {
+      "bottom_profiles": 293,
+      "middle_profiles": 981,
+      "reachable_ranks": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "top_1_profiles": 423,
+      "top_3_profiles": 1404,
+      "unreachable_ranks": []
+    }
+  },
+  "monotonicity_violations": 540,
+  "profile_count": 2160,
+  "provenance": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+  "risk_raw_max": 1.0,
+  "risk_raw_min": 0.0,
+  "risk_raw_range": 1.0,
+  "risk_unique_values": 2160
+}

@@ -1,0 +1,480 @@
+{
+  "request_id": "threshold_low_fallback_02",
+  "patient": {
+    "patient_id": "threshold_low_patient_02",
+    "age": 58,
+    "zip_code": "89506",
+    "local_externalities": {
+      "health_status": "healthy",
+      "zip_code": "89506",
+      "house_price_zip": "low",
+      "area_type": "metropolitan",
+      "housing_type": "single_home",
+      "distance_to_clinic": "near",
+      "driving_condition": "good_summer"
+    },
+    "severity_score_override": 0.2,
+    "metadata": {
+      "test_case_note": "Low-risk route with insufficient ZIP pool: rho 0.20 <= tau 0.50, ZIP 89506 has too few RN/PT clinicians, so RN/PT fallback to full pool.",
+      "expected_threshold_comparison": "rho <= tau"
+    }
+  },
+  "clinicians": [
+    {
+      "clinician_id": 101,
+      "clinician_name": "RN1",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 5.0,
+        "DCs": 5.0,
+        "Eligible_Surveys": 2.0
+      },
+      "metrics": {
+        "PPH": 0.578947368421053,
+        "DTC": 0.457829132430591,
+        "DFS": 0.333333333333333,
+        "Oral_Meds": 0.891826369101749,
+        "Dyspnea": 0.6820815201264,
+        "Care_of_Patients": 1.0,
+        "Communications": 0.8,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 1.0,
+        "Recommend": 1.0
+      },
+      "zip_codes_treated": "89506,01234"
+    },
+    {
+      "clinician_id": 102,
+      "clinician_name": "RN2",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 400.0,
+        "DCs": 313.0,
+        "Eligible_Surveys": 21.0
+      },
+      "metrics": {
+        "PPH": 0.115485564304462,
+        "DTC": 0.748383266835495,
+        "DFS": 0.791808873720137,
+        "Oral_Meds": 0.837837775741585,
+        "Dyspnea": 0.920223352318653,
+        "Care_of_Patients": 0.853658536585366,
+        "Communications": 0.786516853932584,
+        "Care_Issues": 0.817307692307692,
+        "Agency_Rating": 0.904761904761905,
+        "Recommend": 0.857142857142857
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 103,
+      "clinician_name": "RN3",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 5.0,
+        "DCs": 17.0,
+        "Eligible_Surveys": 3.0
+      },
+      "metrics": {
+        "PPH": 0.296296296296296,
+        "DTC": 0.678636568970795,
+        "DFS": 0.615384615384615,
+        "Oral_Meds": 0.551302118268073,
+        "Dyspnea": 0.729479325624038,
+        "Care_of_Patients": 0.818181818181818,
+        "Communications": 0.846153846153846,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 0.666666666666667,
+        "Recommend": 0.666666666666667
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 104,
+      "clinician_name": "RN4",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 0.0,
+        "DCs": 2.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.0,
+        "DTC": 0.682580560463715,
+        "DFS": 1.0,
+        "Oral_Meds": 0.882309680254957,
+        "Dyspnea": 0.920440819988451,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 201,
+      "clinician_name": "PT1",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 7.0,
+        "DCs": 5.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.2,
+        "DTC": 0.690193422604718,
+        "DFS": 0.75,
+        "Oral_Meds": 0.936468592566396,
+        "Dyspnea": 0.944879467665081,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "89506,01234"
+    },
+    {
+      "clinician_id": 205,
+      "clinician_name": "PT5",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 1.0,
+        "DCs": 1.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.0,
+        "DTC": 0.941701381505654,
+        "DFS": 1.0,
+        "Oral_Meds": 1.0,
+        "Dyspnea": 1.0,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 105,
+      "clinician_name": "RN5",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 13.0,
+        "DCs": 17.0,
+        "Eligible_Surveys": 1.0
+      },
+      "metrics": {
+        "PPH": 0.1,
+        "DTC": 0.976666870316932,
+        "DFS": 0.615384615384615,
+        "Oral_Meds": 0.742401527798856,
+        "Dyspnea": 0.902335697177104,
+        "Care_of_Patients": 1.0,
+        "Communications": 1.0,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 1.0,
+        "Recommend": 1.0
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 106,
+      "clinician_name": "RN6",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 409.0,
+        "DCs": 317.0,
+        "Eligible_Surveys": 30.0
+      },
+      "metrics": {
+        "PPH": 0.125641025641026,
+        "DTC": 0.72487069519276,
+        "DFS": 0.770547945205479,
+        "Oral_Meds": 0.844261355870244,
+        "Dyspnea": 0.941737761602112,
+        "Care_of_Patients": 0.912280701754386,
+        "Communications": 0.903703703703704,
+        "Care_Issues": 0.888111888111888,
+        "Agency_Rating": 0.931034482758621,
+        "Recommend": 0.793103448275862
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 202,
+      "clinician_name": "PT2",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 38.0,
+        "DCs": 29.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.0357142857142857,
+        "DTC": 0.77872917485343,
+        "DFS": 0.724137931034483,
+        "Oral_Meds": 0.855443177634615,
+        "Dyspnea": 0.662672659031743,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 107,
+      "clinician_name": "RN7",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 25.0,
+        "DCs": 21.0,
+        "Eligible_Surveys": 2.0
+      },
+      "metrics": {
+        "PPH": 0.28125,
+        "DTC": 0.668151156637158,
+        "DFS": 0.761904761904762,
+        "Oral_Meds": 0.860252218537611,
+        "Dyspnea": 0.847604169917236,
+        "Care_of_Patients": 1.0,
+        "Communications": 0.875,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 1.0,
+        "Recommend": 0.5
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 108,
+      "clinician_name": "RN8",
+      "discipline": "RN",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 65.0,
+        "DCs": 48.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.137254901960784,
+        "DTC": 0.809607906314061,
+        "DFS": 0.8,
+        "Oral_Meds": 0.946119460475939,
+        "Dyspnea": 0.926239774267648,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 204,
+      "clinician_name": "PT4",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 31.0,
+        "DCs": 25.0,
+        "Eligible_Surveys": 2.0
+      },
+      "metrics": {
+        "PPH": 0.125,
+        "DTC": 0.623617907954899,
+        "DFS": 0.88,
+        "Oral_Meds": 0.933992212240963,
+        "Dyspnea": 0.989052459045214,
+        "Care_of_Patients": 1.0,
+        "Communications": 1.0,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 1.0,
+        "Recommend": 1.0
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 206,
+      "clinician_name": "PT6",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 17.0,
+        "DCs": 13.0,
+        "Eligible_Surveys": 3.0
+      },
+      "metrics": {
+        "PPH": 0.0,
+        "DTC": 0.852183479975698,
+        "DFS": 0.692307692307692,
+        "Oral_Meds": 0.801971059000344,
+        "Dyspnea": 0.921703561690273,
+        "Care_of_Patients": 0.916666666666667,
+        "Communications": 0.833333333333333,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 1.0,
+        "Recommend": 1.0
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 207,
+      "clinician_name": "PT7",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 20.0,
+        "DCs": 18.0,
+        "Eligible_Surveys": 3.0
+      },
+      "metrics": {
+        "PPH": 0.0526315789473684,
+        "DTC": 0.796241772486637,
+        "DFS": 0.777777777777778,
+        "Oral_Meds": 0.775565102864978,
+        "Dyspnea": 0.919575142498304,
+        "Care_of_Patients": 1.0,
+        "Communications": 1.0,
+        "Care_Issues": 1.0,
+        "Agency_Rating": 0.666666666666667,
+        "Recommend": 1.0
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 203,
+      "clinician_name": "Capel, Jenny (PT)",
+      "discipline": "PT",
+      "data_origin": "clinical_scorecard_raw_csv",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 17.0,
+        "DCs": 13.0,
+        "Eligible_Surveys": 0.0
+      },
+      "metrics": {
+        "PPH": 0.0,
+        "DTC": 0.876986585650557,
+        "DFS": 0.846153846153846,
+        "Oral_Meds": 0.857206792305603,
+        "Dyspnea": 0.866898097707514,
+        "Care_of_Patients": null,
+        "Communications": null,
+        "Care_Issues": null,
+        "Agency_Rating": null,
+        "Recommend": null
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 301,
+      "clinician_name": "OT1",
+      "discipline": "OT",
+      "data_origin": "synthetic_lab_fill",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 72.0,
+        "DCs": 58.0,
+        "Eligible_Surveys": 12.0
+      },
+      "metrics": {
+        "PPH": 0.12,
+        "DTC": 0.79,
+        "DFS": 0.86,
+        "Oral_Meds": 0.84,
+        "Dyspnea": 0.92,
+        "Care_of_Patients": 0.94,
+        "Communications": 0.91,
+        "Care_Issues": 0.89,
+        "Agency_Rating": 0.9,
+        "Recommend": 0.88
+      },
+      "zip_codes_treated": "01234"
+    },
+    {
+      "clinician_id": 302,
+      "clinician_name": "OT2",
+      "discipline": "OT",
+      "data_origin": "synthetic_lab_fill",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 64.0,
+        "DCs": 52.0,
+        "Eligible_Surveys": 10.0
+      },
+      "metrics": {
+        "PPH": 0.15,
+        "DTC": 0.755,
+        "DFS": 0.82,
+        "Oral_Meds": 0.85,
+        "Dyspnea": 0.91,
+        "Care_of_Patients": 0.92,
+        "Communications": 0.875,
+        "Care_Issues": 0.88,
+        "Agency_Rating": 0.89,
+        "Recommend": 0.86
+      },
+      "zip_codes_treated": "89502,01234"
+    },
+    {
+      "clinician_id": 303,
+      "clinician_name": "OT3",
+      "discipline": "OT",
+      "data_origin": "synthetic_lab_fill",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 55.0,
+        "DCs": 44.0,
+        "Eligible_Surveys": 9.0
+      },
+      "metrics": {
+        "PPH": 0.105,
+        "DTC": 0.775,
+        "DFS": 0.885,
+        "Oral_Meds": 0.83,
+        "Dyspnea": 0.935,
+        "Care_of_Patients": 0.93,
+        "Communications": 0.895,
+        "Care_Issues": 0.905,
+        "Agency_Rating": 0.885,
+        "Recommend": 0.845
+      },
+      "zip_codes_treated": "01234"
+    }
+  ],
+  "options": {
+    "threshold_routing_enabled": true,
+    "risk_threshold": 0.5,
+    "threshold_source": "manual_test_threshold_not_outcome_validated",
+    "top_k_groups": 3
+  }
+}

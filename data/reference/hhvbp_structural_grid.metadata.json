@@ -1,0 +1,31 @@
+{
+  "artifact_type": "hhvbp_exhaustive_structural_profile_grid",
+  "schema_version": "1.0",
+  "creation_timestamp": "2026-07-15T00:00:00Z",
+  "reference_id": "9237e030d3eeed990f7138399b26f3024037939e48d5eb89866d5bdd875af8d7",
+  "config_hash": "3e8af15c2120cedd72f05b7b33402c6efb6bc20946872df2b2c8592affe4e91b",
+  "row_count": 2160,
+  "expected_row_count": 2160,
+  "factor_order": [
+    "health_status",
+    "age_group",
+    "house_price_zip",
+    "area_type",
+    "housing_type",
+    "distance_to_clinic",
+    "driving_condition"
+  ],
+  "enumeration": "exact_cartesian_product_not_population_weighted",
+  "risk_percentiles_against": "hhvbp_risk_reference.json",
+  "risk_reference_artifact_sha256": "cbf45ed1f434188c0ec622b3e8b1983f21528a0686ef0e0e3f7d993e45973d9f",
+  "structural_grid_csv_sha256": "474ee3ffc3b0e68972b9f3fedd54f559ac46a43a504aed8c9c55f08a133bbfa9",
+  "threshold_percentile": 0.75,
+  "tau_raw": 0.5696213523887566,
+  "public_data_only": true,
+  "semi_synthetic": true,
+  "synthetic_data": true,
+  "sponsor_data_used": false,
+  "outcome_validated": false,
+  "production_validated": false,
+  "warning": "Public-data-only, expert-configured offline semi-synthetic simulation; not sponsor historical data and not outcome validated."
+}

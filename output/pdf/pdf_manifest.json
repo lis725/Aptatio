@@ -1,0 +1,79 @@
+{
+  "artifact_type": "current_hhvbp_pdf_report_bundle_manifest",
+  "created_at_utc": "2026-07-15T13:49:16.253348+00:00",
+  "manifest_identity_sha256": "baca156ac36616912628df6805397eb9e5f9b8daaaea81585b24fb9f1df79684",
+  "production_validated": false,
+  "public_data_only": true,
+  "renderer": "reportlab_platypus",
+  "reports": [
+    {
+      "bytes": 5865,
+      "max_table_columns": 4,
+      "orientation": "portrait",
+      "pages": 2,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\current_model_report.pdf",
+      "sha256": "be66a19e2d068cb23c2cdd3fc2b4b74e241513c90ac235dcbdb53c4bd8636bdc",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\current_model_report.md",
+      "source_sha256": "67e85490775dda9908f853a66bb03a831f5474df1dfbd1da592d27f1dc775f4f"
+    },
+    {
+      "bytes": 4480,
+      "max_table_columns": 0,
+      "orientation": "portrait",
+      "pages": 1,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\nontechnical_report.pdf",
+      "sha256": "6740a18671e1c9815ca95a641d8956c6f94238a756bb1baadc8ca1e20a427dbe",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\nontechnical_report.md",
+      "source_sha256": "5a74dfdbfa50828e08c7561ef75865511bdba8ed53dc8cf5ad7ce2ce91884598"
+    },
+    {
+      "bytes": 8110,
+      "max_table_columns": 5,
+      "orientation": "portrait",
+      "pages": 2,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\reno_age_sensitivity_report.pdf",
+      "sha256": "0c4f4a3d85642894735e370f5927520dd7235aff74e33347bb4a924acd0cffbc",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\reno_age_sensitivity_report.md",
+      "source_sha256": "010ab67600d153ee62a1dbab9f16d027aa89e48eb0149ebb4ad4a37d7f845a21"
+    },
+    {
+      "bytes": 12807,
+      "max_table_columns": 7,
+      "orientation": "portrait",
+      "pages": 4,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\reno_other_metrics_report.pdf",
+      "sha256": "2f289bedef9630bdd0e71092f81ac8311461a344ce1563dbd56b2274838f6421",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\reno_other_metrics_report.md",
+      "source_sha256": "7ca1740843cc1951204858cfce0cb8891d9cdeeeeafbfba2912c251b77e37093"
+    },
+    {
+      "bytes": 5231,
+      "max_table_columns": 10,
+      "orientation": "landscape",
+      "pages": 1,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\reno_pph_report.pdf",
+      "sha256": "6342b21362d1b11398b51a3a25a9c773d3e199708309d0f77b4db0c9bcf573a6",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\reno_pph_report.md",
+      "source_sha256": "30e060951fab47a97931ed720bb988cf8554ff595999ea58b98696c31a1652c6"
+    },
+    {
+      "bytes": 4518,
+      "max_table_columns": 0,
+      "orientation": "portrait",
+      "pages": 1,
+      "pdf": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\output\\pdf\\sponsor_report.pdf",
+      "sha256": "72b5c668142abf5e343febfbcfb30fb04d390e3ac924204dc0ccbcff4c173b61",
+      "source": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\sponsor_report.md",
+      "source_sha256": "be7c71305421d233c705a229c2e0d64d933ffcb8969ca1769aff5a8c2024043e"
+    }
+  ],
+  "schema_version": "2.0",
+  "source_report_manifest": {
+    "artifact_type": "current_hhvbp_report_bundle_manifest",
+    "bundle_identity_sha256": "efde6c1422b85b451c72a614f2748d18fec523599b0c17a7be7a198dd3f08b1a",
+    "generated_at_utc": "2026-07-15T00:00:00Z",
+    "manifest_file_sha256_at_render_start": "5f15bb7752f8b2c736ff24aaf66a808769d82da65103b877b8456d33c0ec9cd7",
+    "path": "C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\reports\\current\\report_manifest.json",
+    "schema_version": "1.0"
+  }
+}

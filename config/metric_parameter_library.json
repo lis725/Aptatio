@@ -1,0 +1,740 @@
+{
+  "cms_model": "Expanded HHVBP",
+  "performance_year": 2025,
+  "payment_year": 2027,
+  "measure_set_version": "CY2025",
+  "cms_version_locked": true,
+  "canonical_metric_aliases": {
+    "DFS": [
+      "DFS",
+      "DC Function",
+      "Discharge Function Score"
+    ],
+    "Dyspnea": [
+      "Dyspnea",
+      "Improvement in Dyspnea"
+    ],
+    "Oral_Meds": [
+      "Oral_Meds",
+      "Oral Meds",
+      "Improvement in Management of Oral Medications"
+    ],
+    "DTC": [
+      "DTC",
+      "DTC-PAC",
+      "Discharge to Community",
+      "Discharge to Community-Post Acute Care",
+      "Discharge to Community—Post Acute Care"
+    ],
+    "PPH": [
+      "PPH",
+      "Potentially Preventable Hospitalization"
+    ],
+    "Care_of_Patients": [
+      "Care_of_Patients",
+      "Care of Patients"
+    ],
+    "Communications": [
+      "Communications",
+      "Communications Between Providers and Patients"
+    ],
+    "Care_Issues": [
+      "Care_Issues",
+      "Care Issues",
+      "Specific Care Issues"
+    ],
+    "Agency_Rating": [
+      "Agency_Rating",
+      "Agency Rating",
+      "Overall",
+      "Overall Rating",
+      "Overall / Agency Rating"
+    ],
+    "Recommend": [
+      "Recommend",
+      "Willingness to Recommend"
+    ]
+  },
+  "metrics": {
+    "PPH": {
+      "display_name": "PPH (26%)",
+      "composite_weight": 0.26,
+      "suitability_tier": "high",
+      "notes": "Claims-based hospitalization metric. Local externalities are plausibly strong drivers of access, follow-up reliability, and hospitalization risk.",
+      "delta": 0.2,
+      "gap_scale": 1.0,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "strong",
+        "house_price_zip": "strong",
+        "area_type": "strong",
+        "housing_type": "medium",
+        "distance_to_clinic": "medium",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 60,
+          "mode": 75,
+          "high": 90
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 70,
+          "mode": 80,
+          "high": 90
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 60,
+          "mode": 70,
+          "high": 80
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 40,
+          "mode": 50,
+          "high": 60
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 35,
+          "mode": 50,
+          "high": 65
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        }
+      }
+    },
+    "DTC": {
+      "display_name": "Discharge to Community (9%)",
+      "composite_weight": 0.09,
+      "suitability_tier": "high",
+      "notes": "Discharge destination is plausibly affected by clinical severity plus home and access conditions. Same framework is appropriate.",
+      "delta": 0.18,
+      "gap_scale": 0.9,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "strong",
+        "house_price_zip": "strong",
+        "area_type": "strong",
+        "housing_type": "weak",
+        "distance_to_clinic": "strong",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 55,
+          "mode": 70,
+          "high": 85
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 80,
+          "mode": 90,
+          "high": 100
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 70,
+          "mode": 80,
+          "high": 90
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 60,
+          "mode": 70,
+          "high": 80
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        }
+      }
+    },
+    "DFS": {
+      "display_name": "DFS (20%)",
+      "composite_weight": 0.2,
+      "suitability_tier": "high",
+      "notes": "Discharge function is clinically related to severity and home environment. Same framework is appropriate.",
+      "delta": 0.18,
+      "gap_scale": 0.85,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "strong",
+        "house_price_zip": "strong",
+        "area_type": "strong",
+        "housing_type": "medium",
+        "distance_to_clinic": "medium",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 50,
+          "mode": 65,
+          "high": 80
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 60,
+          "mode": 70,
+          "high": 80
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 60,
+          "mode": 70,
+          "high": 80
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 40,
+          "mode": 50,
+          "high": 60
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        }
+      }
+    },
+    "Oral_Meds": {
+      "display_name": "Oral Meds (9%)",
+      "composite_weight": 0.09,
+      "suitability_tier": "medium",
+      "notes": "The framework is usable, but local externalities only partially explain medication-management improvement because cognition and caregiver support are not explicitly modeled.",
+      "delta": 0.15,
+      "gap_scale": 0.75,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "medium",
+        "house_price_zip": "medium",
+        "area_type": "medium",
+        "housing_type": "medium",
+        "distance_to_clinic": "weak",
+        "driving_condition": "weak"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 45,
+          "mode": 60,
+          "high": 75
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 15,
+          "mode": 25,
+          "high": 35
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 10,
+          "mode": 20,
+          "high": 30
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        }
+      }
+    },
+    "Dyspnea": {
+      "display_name": "Dyspnea (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "medium",
+      "notes": "The framework is usable as a scenario tool, but dyspnea improvement is more clinically driven than environment driven, so separation should remain conservative.",
+      "delta": 0.1,
+      "gap_scale": 0.65,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "medium",
+        "house_price_zip": "weak",
+        "area_type": "weak",
+        "housing_type": "weak",
+        "distance_to_clinic": "strong",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 35,
+          "mode": 50,
+          "high": 65
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 10,
+          "mode": 20,
+          "high": 30
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 10,
+          "mode": 20,
+          "high": 30
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 70,
+          "mode": 80,
+          "high": 90
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 40,
+          "mode": 50,
+          "high": 60
+        }
+      }
+    },
+    "Recommend": {
+      "display_name": "Recommend (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "low",
+      "notes": "The same framework can still be used, but only as an externality-conditioned difficulty layer. Agency behavior and therapist communication likely dominate.",
+      "delta": 0.08,
+      "gap_scale": 0.45,
+      "importance_levels": {
+        "health_status": "medium",
+        "age_group": "weak",
+        "house_price_zip": "weak",
+        "area_type": "weak",
+        "housing_type": "weak",
+        "distance_to_clinic": "strong",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 70,
+          "mode": 80,
+          "high": 90
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 40,
+          "mode": 50,
+          "high": 60
+        }
+      }
+    },
+    "Agency_Rating": {
+      "display_name": "Agency Rating (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "low",
+      "notes": "Use the same framework cautiously. Treat outputs as scenario curves, not confident predictions, because agency-level practice style is largely unmodeled.",
+      "delta": 0.08,
+      "gap_scale": 0.45,
+      "importance_levels": {
+        "health_status": "medium",
+        "age_group": "weak",
+        "house_price_zip": "medium",
+        "area_type": "medium",
+        "housing_type": "medium",
+        "distance_to_clinic": "strong",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 45,
+          "mode": 55,
+          "high": 65
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        }
+      }
+    },
+    "Care_Issues": {
+      "display_name": "Care Issues (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "low",
+      "notes": "Use only as a weak externality-conditioned scenario model. The direct drivers are mostly provider-side and process-side, not local environment.",
+      "delta": 0.08,
+      "gap_scale": 0.45,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "medium",
+        "house_price_zip": "medium",
+        "area_type": "medium",
+        "housing_type": "medium",
+        "distance_to_clinic": "weak",
+        "driving_condition": "weak"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 35,
+          "mode": 45,
+          "high": 55
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 10,
+          "mode": 15,
+          "high": 20
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 10,
+          "mode": 15,
+          "high": 20
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        }
+      }
+    },
+    "Communications": {
+      "display_name": "Communications (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "low",
+      "notes": "Use the same framework only as a conservative difficulty layer. Communication quality is mainly therapist-side, not environment-side.",
+      "delta": 0.07,
+      "gap_scale": 0.4,
+      "importance_levels": {
+        "health_status": "medium",
+        "age_group": "medium",
+        "house_price_zip": "medium",
+        "area_type": "medium",
+        "housing_type": "medium",
+        "distance_to_clinic": "weak",
+        "driving_condition": "weak"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 20,
+          "mode": 30,
+          "high": 40
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        }
+      }
+    },
+    "Care_of_Patients": {
+      "display_name": "Care of Patients (6%)",
+      "composite_weight": 0.06,
+      "suitability_tier": "low",
+      "notes": "Use the same framework cautiously. The model can represent externality-conditioned friction, but not the full patient-experience mechanism.",
+      "delta": 0.07,
+      "gap_scale": 0.4,
+      "importance_levels": {
+        "health_status": "strong",
+        "age_group": "medium",
+        "house_price_zip": "weak",
+        "area_type": "weak",
+        "housing_type": "weak",
+        "distance_to_clinic": "medium",
+        "driving_condition": "medium"
+      },
+      "expert_elicitation": {
+        "health_status": {
+          "best_category": "healthy",
+          "worst_category": "unhealthy",
+          "low": 100,
+          "mode": 100,
+          "high": 100
+        },
+        "age_group": {
+          "best_category": "age_40_50",
+          "worst_category": "age_80_plus",
+          "low": 30,
+          "mode": 40,
+          "high": 50
+        },
+        "house_price_zip": {
+          "best_category": "high",
+          "worst_category": "low",
+          "low": 10,
+          "mode": 15,
+          "high": 25
+        },
+        "area_type": {
+          "best_category": "micropolitan",
+          "worst_category": "rural",
+          "low": 10,
+          "mode": 15,
+          "high": 20
+        },
+        "housing_type": {
+          "best_category": "single_home",
+          "worst_category": "apartment",
+          "low": 10,
+          "mode": 15,
+          "high": 20
+        },
+        "distance_to_clinic": {
+          "best_category": "near",
+          "worst_category": "far",
+          "low": 50,
+          "mode": 60,
+          "high": 70
+        },
+        "driving_condition": {
+          "best_category": "good_summer",
+          "worst_category": "bad_winter",
+          "low": 40,
+          "mode": 50,
+          "high": 60
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Direct dependencies, pinned to the environment used for repository verification.
+numpy==2.3.5
+pandas==3.0.1
+reportlab==4.4.9

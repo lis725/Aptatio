@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0.0",
+  "scope_note": "CY2025 Expanded HHVBP public-only prototype. Uses seven patient factors, discipline-specific clinician capability percentiles, empirical reference risk percentiles, hard ZIP-history routing for lower-risk patients, and deterministic OT rotation. It is simulation-based and not outcome-validated.",
+  "default_metric_input_scale": "auto",
+  "enable_shrinkage": false,
+  "shrinkage": {
+    "outcome_k": 30.0,
+    "survey_k": 15.0
+  },
+  "metric_benchmarks": {
+    "PPH": 0.138870431893688,
+    "DTC": 0.738240379030761,
+    "DFS": 0.788203753351206,
+    "Oral_Meds": 0.842407641494317,
+    "Dyspnea": 0.922955961942677,
+    "Care_of_Patients": 0.906666666666667,
+    "Communications": 0.8515625,
+    "Care_Issues": 0.869565217391304,
+    "Agency_Rating": 0.88695652173913,
+    "Recommend": 0.850877192982456
+  },
+  "discipline_metric_weights": {
+    "PPH": {
+      "RN": 0.625,
+      "PT": 0.37499999999999994,
+      "OT": 0.0
+    },
+    "DTC": {
+      "RN": 0.5625,
+      "PT": 0.43749999999999994,
+      "OT": 0.0
+    },
+    "DFS": {
+      "RN": 0.5333333333333333,
+      "PT": 0.4666666666666666,
+      "OT": 0.0
+    },
+    "Oral_Meds": {
+      "RN": 0.8235294117647058,
+      "PT": 0.17647058823529413,
+      "OT": 0.0
+    },
+    "Dyspnea": {
+      "RN": 0.5294117647058824,
+      "PT": 0.47058823529411764,
+      "OT": 0.0
+    },
+    "Recommend": {
+      "RN": 0.5074626865671642,
+      "PT": 0.4925373134328358,
+      "OT": 0.0
+    },
+    "Agency_Rating": {
+      "RN": 0.5074626865671642,
+      "PT": 0.4925373134328358,
+      "OT": 0.0
+    },
+    "Care_Issues": {
+      "RN": 0.6,
+      "PT": 0.39999999999999997,
+      "OT": 0.0
+    },
+    "Communications": {
+      "RN": 0.5074626865671642,
+      "PT": 0.4925373134328358,
+      "OT": 0.0
+    },
+    "Care_of_Patients": {
+      "RN": 0.5074626865671642,
+      "PT": 0.4925373134328358,
+      "OT": 0.0
+    }
+  },
+  "team_output_defaults": {
+    "return_team_rankings": false,
+    "top_k_per_discipline": null,
+    "top_k_teams": 3,
+    "max_candidates_per_discipline_for_team_enumeration": 3
+  },
+  "scored_disciplines": [
+    "RN",
+    "PT"
+  ],
+  "non_scored_disciplines": [
+    "OT"
+  ],
+  "matching_defaults": {
+    "top_k_groups": 3,
+    "top_k_per_discipline": null,
+    "ot_assignment_strategy": "deterministic_rotation_unique_if_possible"
+  },
+  "threshold_routing": {
+    "enabled": true,
+    "risk_threshold": 0.75,
+    "threshold_semantics": "risk_percentile_u",
+    "threshold_source": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+    "risk_reference_relative_path": "data/reference/hhvbp_risk_reference.json",
+    "zip_history_enabled": true,
+    "min_pool_size_by_discipline": {
+      "RN": 3,
+      "PT": 3,
+      "OT": 1
+    },
+    "fallback_to_full_pool": true,
+    "compute_capability_percentiles_before_filtering": true,
+    "allow_demo_default_threshold": false,
+    "demo_default_threshold": 0.75
+  }
+}

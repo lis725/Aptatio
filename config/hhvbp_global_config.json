@@ -1,0 +1,177 @@
+{
+  "cms_model": "Expanded HHVBP",
+  "performance_year": 2025,
+  "payment_year": 2027,
+  "measure_set_version": "CY2025",
+  "cms_version_locked": true,
+  "project_scope_note": "Production/demo configuration is intentionally frozen to the Expanded HHVBP CY2025 performance-year measure set for sponsor review; CY2026 migration is out of scope.",
+  "factor_order": [
+    "health_status",
+    "age_group",
+    "house_price_zip",
+    "area_type",
+    "housing_type",
+    "distance_to_clinic",
+    "driving_condition"
+  ],
+  "reliability": {
+    "health_status": 0.95,
+    "age_group": 0.95,
+    "house_price_zip": 0.85,
+    "area_type": 0.9,
+    "housing_type": 0.8,
+    "distance_to_clinic": 0.95,
+    "driving_condition": 0.9
+  },
+  "base_favorability": {
+    "health_status": {
+      "healthy": 0.78,
+      "moderate": 0.55,
+      "unhealthy": 0.22
+    },
+    "age_group": {
+      "age_80_plus": 0.22,
+      "age_70_80": 0.36,
+      "age_60_70": 0.5,
+      "age_50_60": 0.62,
+      "age_40_50": 0.72
+    },
+    "house_price_zip": {
+      "high": 0.7,
+      "average": 0.5,
+      "low": 0.3
+    },
+    "area_type": {
+      "micropolitan": 0.68,
+      "metropolitan": 0.6,
+      "small_town": 0.5,
+      "rural": 0.32
+    },
+    "housing_type": {
+      "single_home": 0.65,
+      "apartment": 0.35
+    },
+    "distance_to_clinic": {
+      "near": 0.72,
+      "medium": 0.5,
+      "far": 0.28
+    },
+    "driving_condition": {
+      "good_summer": 0.68,
+      "bad_winter": 0.32
+    }
+  },
+  "age_configuration": {
+    "best_category": "age_40_50",
+    "worst_category": "age_80_plus",
+    "numeric_age_boundaries": {
+      "age_40_50": {
+        "minimum": 40,
+        "minimum_inclusive": true,
+        "maximum": 50,
+        "maximum_inclusive": false
+      },
+      "age_50_60": {
+        "minimum": 50,
+        "minimum_inclusive": true,
+        "maximum": 60,
+        "maximum_inclusive": false
+      },
+      "age_60_70": {
+        "minimum": 60,
+        "minimum_inclusive": true,
+        "maximum": 70,
+        "maximum_inclusive": false
+      },
+      "age_70_80": {
+        "minimum": 70,
+        "minimum_inclusive": true,
+        "maximum": 80,
+        "maximum_inclusive": true
+      },
+      "age_80_plus": {
+        "minimum": 80,
+        "minimum_inclusive": false,
+        "maximum": null,
+        "maximum_inclusive": false
+      }
+    },
+    "raw_band_aliases": {
+      "40_49": "age_40_50",
+      "50_59": "age_50_60",
+      "60_69": "age_60_70",
+      "70_79": "age_70_80",
+      "80_89": "age_80_plus",
+      "80_plus": "age_80_plus",
+      "80+": "age_80_plus",
+      "90_plus": "age_80_plus",
+      "90+": "age_80_plus"
+    },
+    "boundary_distinction": "Numeric age 80 maps to age_70_80; the indivisible raw database band 80_89 maps to age_80_plus."
+  },
+  "profiles": {
+    "best_case": {
+      "health_status": "healthy",
+      "age_group": "age_40_50",
+      "house_price_zip": "high",
+      "area_type": "micropolitan",
+      "housing_type": "single_home",
+      "distance_to_clinic": "near",
+      "driving_condition": "good_summer"
+    },
+    "worst_case": {
+      "health_status": "unhealthy",
+      "age_group": "age_80_plus",
+      "house_price_zip": "low",
+      "area_type": "rural",
+      "housing_type": "apartment",
+      "distance_to_clinic": "far",
+      "driving_condition": "bad_winter"
+    }
+  },
+  "distribution": {
+    "method": "analytic_beta_moment_match",
+    "grid_points": 3000,
+    "kappa_intercept": 5.0,
+    "kappa_slope": 8.0
+  },
+  "scenario_generation": {
+    "reference_profile": "best_case",
+    "include_reference_categories": true,
+    "generate_pairwise_plots": true,
+    "generate_factor_panels": true,
+    "metrics_to_run": []
+  },
+  "display_scale": {
+    "default_direction": "higher_is_better",
+    "display_direction_by_metric": {
+      "PPH": "lower_is_better"
+    },
+    "units_per_latent_point": 0.216,
+    "default_x_label": "Displayed score (%)",
+    "x_label_by_metric": {
+      "PPH": "PPH (%)",
+      "DTC": "DTC (%)",
+      "DFS": "DFS (%)",
+      "Oral_Meds": "Oral Meds (%)",
+      "Dyspnea": "Dyspnea (%)",
+      "Recommend": "Recommend (%)",
+      "Agency_Rating": "Agency Rating (%)",
+      "Care_Issues": "Care Issues (%)",
+      "Communications": "Communications (%)",
+      "Care_of_Patients": "Care of Patients (%)"
+    },
+    "national_average_by_metric": {
+      "PPH": 11.5,
+      "DTC": 74.0,
+      "DFS": 75.6,
+      "Oral_Meds": 88.1,
+      "Dyspnea": 91.7,
+      "Care_of_Patients": 90.2,
+      "Communications": 88.0,
+      "Care_Issues": 85.5,
+      "Agency_Rating": 86.4,
+      "Recommend": 80.0
+    }
+  }
+}

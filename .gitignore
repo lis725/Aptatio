@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environments, tools, and temporary verification artifacts
+.venv/
+venv/
+.agents/
+.codex/
+tmp/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local credentials and API keys
+.env
+*.env
+.env.*
+*api_key*
+*credentials*
+*.pem
+*.key
+
+# Public raw/interim caches and generated outputs
+data/raw/public/**
+data/interim/**
+data/processed/**
+reports/dataset/**
+
+# Keep source manifests and directory placeholders reviewable
+!data/manifests/
+!data/manifests/*.json

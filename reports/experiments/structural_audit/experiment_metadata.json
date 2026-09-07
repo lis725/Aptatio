@@ -1,0 +1,137 @@
+{
+  "artifact_family": "batch_capacity_policy_threshold_experiments",
+  "causal_effects_identified": false,
+  "cms_model": "Expanded HHVBP",
+  "cms_version_locked": true,
+  "common_random_numbers": true,
+  "config": {
+    "availability_rate": 0.96,
+    "capacity_ratio": 1.05,
+    "design_label": "design_001_roster_1_capacity_1.05_zip_0.25",
+    "disciplines": [
+      "RN",
+      "PT",
+      "OT"
+    ],
+    "min_zip_pool": {
+      "OT": 1,
+      "PT": 3,
+      "RN": 3
+    },
+    "n_patients": 10,
+    "outcome_noise_sd": 0.035,
+    "policies": [
+      "P4"
+    ],
+    "roster_sizes": {
+      "OT": 6,
+      "PT": 18,
+      "RN": 24
+    },
+    "seeds": [
+      0
+    ],
+    "thresholds": [
+      0.75
+    ],
+    "zip_sparsity": 0.25
+  },
+  "config_hash": "2e98bdd16e79360fd02dc60a13c662437332b0b1a818a4c49ae8f7add58ff7b1",
+  "created_at_utc": "2026-07-15T13:24:08.200530+00:00",
+  "cy2025_weights": {
+    "Agency_Rating": 0.06,
+    "Care_Issues": 0.06,
+    "Care_of_Patients": 0.06,
+    "Communications": 0.06,
+    "DFS": 0.2,
+    "DTC": 0.09,
+    "Dyspnea": 0.06,
+    "Oral_Meds": 0.09,
+    "PPH": 0.26,
+    "Recommend": 0.06
+  },
+  "cy2025_weights_sum": 1.0,
+  "design_config_hashes": [
+    "2e98bdd16e79360fd02dc60a13c662437332b0b1a818a4c49ae8f7add58ff7b1"
+  ],
+  "design_configs": [
+    {
+      "availability_rate": 0.96,
+      "capacity_ratio": 1.05,
+      "design_label": "design_001_roster_1_capacity_1.05_zip_0.25",
+      "disciplines": [
+        "RN",
+        "PT",
+        "OT"
+      ],
+      "min_zip_pool": {
+        "OT": 1,
+        "PT": 3,
+        "RN": 3
+      },
+      "n_patients": 10,
+      "outcome_noise_sd": 0.035,
+      "policies": [
+        "P4"
+      ],
+      "roster_sizes": {
+        "OT": 6,
+        "PT": 18,
+        "RN": 24
+      },
+      "seeds": [
+        0
+      ],
+      "thresholds": [
+        0.75
+      ],
+      "zip_sparsity": 0.25
+    }
+  ],
+  "held_out_threshold_evaluation_performed": false,
+  "implementation_file_hashes_sha256": {
+    "scripts/run_batch_policy_experiments.py": "06a520867ffe62a8999d40669813016d4ff6ea09d8adcd73e8db7ff73a0a8c45",
+    "src/hhvbp_batch_experiments.py": "b044ca084fe51c267257de7013ef66aa2f04df56a0005dffa9dfdcf4f21f1393"
+  },
+  "limitations": [
+    "No sponsor patient, clinician, assignment, capacity, scheduling, or outcome data were available.",
+    "Clinician causal effects and ZIP-continuity effects are explicit scenario assumptions.",
+    "The P6 optimizer is a deterministic capacity-constrained greedy approximation, not an exact operational scheduler.",
+    "P7 is a feasible latent-quality greedy comparator, not the regret oracle and not evidence of a real-world oracle.",
+    "Scenario-oracle regret uses an unconstrained per-patient latent-information upper bound; it is not an implementable policy.",
+    "Threshold recommendations require at least two candidates; held-out evaluation requires at least two seeds.",
+    "TPS is a CY2025-weighted simulation proxy, not an official CMS payment calculation."
+  ],
+  "measure_set_version": "CY2025",
+  "oracle_regret_available": true,
+  "outcome_validated": false,
+  "payment_year": 2027,
+  "performance_year": 2025,
+  "policies": [
+    "P4"
+  ],
+  "production_demo_threshold": 0.75,
+  "production_threshold_changed": false,
+  "production_validated": false,
+  "provenance": "public_only_semi_synthetic_capacity_pilot_not_outcome_validated",
+  "public_data_only": true,
+  "reproduction_command": "C:\\Users\\iced_lemonade\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe \"C:\\Users\\iced_lemonade\\Documents\\Aptatio Project\\scripts\\run_batch_policy_experiments.py\" --output-dir reports\\experiments\\structural_audit --n-patients 10 --n-seeds 1 --thresholds 0.75 --scenarios A --policies P4 --structural",
+  "result_rows": 1,
+  "risk_percentile_semantics": "persisted_reference_ecdf",
+  "risk_reference_config_hash": "3e8af15c2120cedd72f05b7b33402c6efb6bc20946872df2b2c8592affe4e91b",
+  "risk_reference_id": "9237e030d3eeed990f7138399b26f3024037939e48d5eb89866d5bdd875af8d7",
+  "risk_reference_sample_size": 10000,
+  "scenarios": [
+    "A"
+  ],
+  "seeds": [
+    0
+  ],
+  "source_mode": "deterministic_offline_public_only_semi_synthetic",
+  "synthetic_data": true,
+  "threshold_candidates_fully_rerun": true,
+  "threshold_optimization_evaluated": false,
+  "thresholds": [
+    0.75
+  ]
+}
