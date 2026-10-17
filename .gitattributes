@@ -1,4 +1,2 @@
-# Reference data, reports, and the backend contract contain byte-level hashes.
-# Preserve the original bytes on every platform, including line endings.
+# Runtime configuration and reference data are bound by byte-level hashes.
 * -text
-*.pdf binary
