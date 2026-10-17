@@ -39,7 +39,20 @@ Their simplified response remains:
 {"RN": [...], "PT": [...], "OT": [...]}
 ```
 
-`backend_interface.py` is protected by a byte-level contract test. Rich metadata is available only through internal `assign_clinicians()` / `assign_with_audit()` in `src/hhvbp_assignment_service.py`.
+`backend_interface.py` is protected by a byte-level contract test. The existing inputs and simplified output remain unchanged.
+
+For the agency web application, the new `reporting_interface` accepts the same
+database-derived inputs and returns one JSON-serializable dict containing
+`assignments`, `agency_report`, and `clinician_email`. Email drafts are empty
+until an option is explicitly selected. PDF generation and selection reuse the
+saved response without rerunning allocation; nothing is sent.
+
+```sh
+python -B run_reporting.py --request examples/reporting_synthetic_request.json --output private-output/response.json
+```
+
+See [CS reporting integration](docs/REPORTING_API.md) for the response structure,
+the small backend call change, optional evidence, and PDF export examples.
 
 ## Active algorithm
 

@@ -673,12 +673,15 @@ def attach_zip_history_to_panel(prepared_df: pd.DataFrame, zip_history_by_id: di
     return out
 
 
-def prepare_clinician_panel(raw_df: pd.DataFrame, assignment_params: dict) -> tuple[pd.DataFrame, dict]:
+def prepare_clinician_panel(raw_df: pd.DataFrame, assignment_params: dict, *, include_explanations: bool = False) -> tuple[pd.DataFrame, dict]:
     if raw_df.empty:
         raise ValueError("raw_df is empty.")
     candidate_df = raw_df.copy()
 
     for metric in METRIC_ORDER:
+        if include_explanations:
+            # Preserve original inputs for reporting; never use these columns for scoring.
+            candidate_df[f"_explanation_input_{metric}"] = candidate_df[metric]
         discipline_medians = candidate_df.groupby("discipline")[metric].median()
         filled_values: List[float] = []
         source_labels: List[str] = []
@@ -784,6 +787,8 @@ def prepare_clinician_panel(raw_df: pd.DataFrame, assignment_params: dict) -> tu
             ]
         )
 
+    if include_explanations:
+        keep_cols.extend(f"_explanation_input_{metric}" for metric in METRIC_ORDER)
     prepared_df = candidate_df[keep_cols].sort_values(
         ["discipline", "clinician_id", "clinician_name"], ascending=[True, True, True]
     ).reset_index(drop=True)
@@ -1334,7 +1339,7 @@ def summarize_parameter_versions(config_dir: Path) -> dict:
     }
 
 
-def assign_clinicians(request: dict, config_dir: str | Path | None = None) -> dict:
+def assign_clinicians(request: dict, config_dir: str | Path | None = None, *, include_explanations: bool = False) -> dict:
     config_dir = resolve_config_dir(config_dir)
     assignment_params = load_assignment_parameters(config_dir)
     canonical_metric_aliases = load_canonical_metric_aliases(config_dir)
@@ -1370,7 +1375,9 @@ def assign_clinicians(request: dict, config_dir: str | Path | None = None) -> di
         request, assignment_params, metric_aliases=canonical_metric_aliases
     )
     zip_history_by_id, zip_parser_audit = build_clinician_zip_history_map(request, raw_clinician_df)
-    prepared_df, imputation_summary = prepare_clinician_panel(raw_clinician_df, assignment_params)
+    prepared_df, imputation_summary = prepare_clinician_panel(
+        raw_clinician_df, assignment_params, include_explanations=include_explanations,
+    )
     prepared_df = attach_zip_history_to_panel(prepared_df, zip_history_by_id)
     clinician_rankings = compute_clinician_rankings(prepared_df, patient_need_df, effective_weights, scored_disciplines)
     routing_context = resolve_threshold_routing(assignment_params, options)
@@ -1508,12 +1515,20 @@ def assign_clinicians(request: dict, config_dir: str | Path | None = None) -> di
         "team_rankings": recommended_groups,
         "team_rankings_note": "In schema_version 2.0.0, team_rankings is kept only as a backward-compatible alias for recommended_groups. It no longer represents additive cartesian team enumeration.",
     }
+    if include_explanations:
+        # Opt-in evidence from this execution, captured only after decisions are final.
+        from hhvbp_assignment_explanations import capture_assignment_evidence
+        response["explanation_evidence"] = capture_assignment_evidence(
+            clinician_rankings, routed_rankings, recommended_groups, patient_need_df,
+            effective_weights, assignment_params, routing_context, options, global_cfg,
+            canonical_metric_aliases, risk_reference["metadata"], patient_zip=patient_zip,
+        )
     return response
 
 
-def assign_with_audit(request: dict, config_dir: str | Path | None = None) -> dict:
+def assign_with_audit(request: dict, config_dir: str | Path | None = None, *, include_explanations: bool = False) -> dict:
     """Internal rich-audit entry point; the simplified backend contract is unchanged."""
-    return assign_clinicians(request=request, config_dir=config_dir)
+    return assign_clinicians(request=request, config_dir=config_dir, include_explanations=include_explanations)
 
 
 def load_request(path: str | Path) -> dict:

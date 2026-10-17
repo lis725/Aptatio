@@ -28,6 +28,7 @@ data/raw/public/**
 data/interim/**
 data/processed/**
 reports/dataset/**
+private-output/
 
 # Keep source manifests and directory placeholders reviewable
 !data/manifests/
