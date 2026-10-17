@@ -14,6 +14,9 @@ venv/
 .codex-docs/
 tmp/
 private-output/
+data/raw/
+data/interim/
+data/processed/
 output/
 reports/
 *.log
