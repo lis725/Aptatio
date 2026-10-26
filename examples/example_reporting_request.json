@@ -1,0 +1,1202 @@
+{
+  "request_id": "synthetic_reporting_example_001",
+  "patient": {
+    "patient_id": "synthetic_patient_001",
+    "age": 82,
+    "zip_code": "89502",
+    "local_externalities": {
+      "health_status": "unhealthy",
+      "zip_code": "89502",
+      "house_price_zip": "low",
+      "area_type": "rural",
+      "housing_type": "apartment",
+      "distance_to_clinic": "far",
+      "driving_condition": "bad_winter"
+    }
+  },
+  "clinicians": [
+    {
+      "clinician_id": 101,
+      "clinician_name": "RN Demo 1",
+      "discipline": "RN",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.0,
+        "DTC": 0.8,
+        "DFS": 0.86,
+        "Oral_Meds": 0.93,
+        "Dyspnea": 0.94,
+        "Care_of_Patients": 0.92,
+        "Communications": 0.91,
+        "Care_Issues": 0.9,
+        "Agency_Rating": 0.91,
+        "Recommend": 0.9
+      }
+    },
+    {
+      "clinician_id": 102,
+      "clinician_name": "RN Demo 2",
+      "discipline": "RN",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.14,
+        "DTC": 0.75,
+        "DFS": 0.79,
+        "Oral_Meds": 0.86,
+        "Dyspnea": 0.89,
+        "Care_of_Patients": 0.9,
+        "Communications": 0.86,
+        "Care_Issues": 0.87,
+        "Agency_Rating": 0.88,
+        "Recommend": 0.85
+      }
+    },
+    {
+      "clinician_id": 103,
+      "clinician_name": "RN Demo 3",
+      "discipline": "RN",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.19,
+        "DTC": 0.68,
+        "DFS": 0.71,
+        "Oral_Meds": 0.82,
+        "Dyspnea": 0.86,
+        "Care_of_Patients": 0.84,
+        "Communications": null,
+        "Care_Issues": 0.8,
+        "Agency_Rating": 0.81,
+        "Recommend": 0.78
+      }
+    },
+    {
+      "clinician_id": 201,
+      "clinician_name": "PT Demo 1",
+      "discipline": "PT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.08,
+        "DTC": 0.83,
+        "DFS": 0.91,
+        "Oral_Meds": 0.9,
+        "Dyspnea": 0.93,
+        "Care_of_Patients": 0.93,
+        "Communications": 0.9,
+        "Care_Issues": 0.92,
+        "Agency_Rating": 0.92,
+        "Recommend": 0.91
+      }
+    },
+    {
+      "clinician_id": 202,
+      "clinician_name": "PT Demo 2",
+      "discipline": "PT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.13,
+        "DTC": 0.76,
+        "DFS": 0.82,
+        "Oral_Meds": 0.87,
+        "Dyspnea": 0.91,
+        "Care_of_Patients": 0.88,
+        "Communications": 0.86,
+        "Care_Issues": 0.85,
+        "Agency_Rating": 0.87,
+        "Recommend": 0.84
+      }
+    },
+    {
+      "clinician_id": 203,
+      "clinician_name": "PT Demo 3",
+      "discipline": "PT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "count_proxies": {
+        "SOCs": 40,
+        "DCs": 35,
+        "Eligible_Surveys": 20
+      },
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {
+        "PPH": 0.17,
+        "DTC": 0.7,
+        "DFS": 0.74,
+        "Oral_Meds": 0.83,
+        "Dyspnea": 0.87,
+        "Care_of_Patients": 0.85,
+        "Communications": 0.82,
+        "Care_Issues": 0.81,
+        "Agency_Rating": 0.82,
+        "Recommend": 0.8
+      }
+    },
+    {
+      "clinician_id": 301,
+      "clinician_name": "OT Demo 1",
+      "discipline": "OT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {}
+    },
+    {
+      "clinician_id": 302,
+      "clinician_name": "OT Demo 2",
+      "discipline": "OT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {}
+    },
+    {
+      "clinician_id": 303,
+      "clinician_name": "OT Demo 3",
+      "discipline": "OT",
+      "data_origin": "synthetic_demo",
+      "metric_scale": "proportion",
+      "zip_codes_treated": [
+        "89502"
+      ],
+      "metrics": {}
+    }
+  ],
+  "scorecard_evidence": {
+    "source_kind": "synthetic_demo_not_production",
+    "clinicians": [
+      {
+        "clinician_id": 101,
+        "discipline": "RN",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.0,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.8,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.86,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.93,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.94,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.92,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": 0.91,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.9,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.91,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.9,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      },
+      {
+        "clinician_id": 102,
+        "discipline": "RN",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.14,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.75,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.79,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.86,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.89,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.9,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": 0.86,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.87,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.88,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.85,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      },
+      {
+        "clinician_id": 103,
+        "discipline": "RN",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.19,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.68,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.71,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.82,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.86,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.84,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": null,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.8,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.81,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.78,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      },
+      {
+        "clinician_id": 201,
+        "discipline": "PT",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.08,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.83,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.91,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.9,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.93,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.93,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": 0.9,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.92,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.92,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.91,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      },
+      {
+        "clinician_id": 202,
+        "discipline": "PT",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.13,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.76,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.82,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.87,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.91,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.88,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": 0.86,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.85,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.87,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.84,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      },
+      {
+        "clinician_id": 203,
+        "discipline": "PT",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "state_id": "NV",
+        "metrics": {
+          "PPH": {
+            "value": 0.17,
+            "unit": "proportion",
+            "definition": "synthetic-demo-PPH-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DTC": {
+            "value": 0.7,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DTC-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "DFS": {
+            "value": 0.74,
+            "unit": "proportion",
+            "definition": "synthetic-demo-DFS-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Oral_Meds": {
+            "value": 0.83,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Oral_Meds-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Dyspnea": {
+            "value": 0.87,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Dyspnea-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_of_Patients": {
+            "value": 0.85,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Communications": {
+            "value": 0.82,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Communications-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Care_Issues": {
+            "value": 0.81,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Care_Issues-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Agency_Rating": {
+            "value": 0.82,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Agency_Rating-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          },
+          "Recommend": {
+            "value": 0.8,
+            "unit": "proportion",
+            "definition": "synthetic-demo-Recommend-definition-v1",
+            "source": {
+              "label": "Invented clinician value for this JSON example",
+              "provenance": "synthetic_demo_not_production"
+            }
+          }
+        }
+      }
+    ],
+    "benchmarks": [
+      {
+        "scope": "national",
+        "metric_key": "PPH",
+        "value": 0.12,
+        "unit": "proportion",
+        "definition": "synthetic-demo-PPH-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "DTC",
+        "value": 0.74,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DTC-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "DFS",
+        "value": 0.76,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DFS-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Oral_Meds",
+        "value": 0.88,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Oral_Meds-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Dyspnea",
+        "value": 0.9,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Dyspnea-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Care_of_Patients",
+        "value": 0.89,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Communications",
+        "value": 0.87,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Communications-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Care_Issues",
+        "value": 0.85,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_Issues-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Agency_Rating",
+        "value": 0.86,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Agency_Rating-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "national",
+        "metric_key": "Recommend",
+        "value": 0.82,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Recommend-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented national benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "state",
+        "metric_key": "PPH",
+        "value": 0.11,
+        "unit": "proportion",
+        "definition": "synthetic-demo-PPH-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "DTC",
+        "value": 0.75,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DTC-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "DFS",
+        "value": 0.77,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DFS-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Oral_Meds",
+        "value": 0.86,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Oral_Meds-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Dyspnea",
+        "value": 0.91,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Dyspnea-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Care_of_Patients",
+        "value": 0.88,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Communications",
+        "value": 0.86,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Communications-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Care_Issues",
+        "value": 0.84,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_Issues-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Agency_Rating",
+        "value": 0.85,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Agency_Rating-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "state",
+        "metric_key": "Recommend",
+        "value": 0.81,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Recommend-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented state benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        },
+        "state_id": "NV"
+      },
+      {
+        "scope": "organization",
+        "metric_key": "PPH",
+        "value": 0.14,
+        "unit": "proportion",
+        "definition": "synthetic-demo-PPH-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "DTC",
+        "value": 0.73,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DTC-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "DFS",
+        "value": 0.79,
+        "unit": "proportion",
+        "definition": "synthetic-demo-DFS-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Oral_Meds",
+        "value": 0.84,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Oral_Meds-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Dyspnea",
+        "value": 0.89,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Dyspnea-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Care_of_Patients",
+        "value": 0.9,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_of_Patients-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Communications",
+        "value": 0.85,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Communications-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Care_Issues",
+        "value": 0.86,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Care_Issues-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Agency_Rating",
+        "value": 0.88,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Agency_Rating-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      },
+      {
+        "scope": "organization",
+        "metric_key": "Recommend",
+        "value": 0.84,
+        "unit": "proportion",
+        "definition": "synthetic-demo-Recommend-definition-v1",
+        "reporting_period": "synthetic-demo-period-not-real-observations",
+        "source": {
+          "label": "Invented organization benchmark for this JSON example",
+          "provenance": "synthetic_demo_not_production"
+        }
+      }
+    ]
+  },
+  "report_demo_synthetic": true,
+  "metadata": {
+    "purpose": "Runnable reporting request for the 2026-10-17 interface; all patients, clinicians, metrics, counts and benchmarks are fictional.",
+    "compared_with_previous_example": "The original request_id, patient and clinicians structure is unchanged. scorecard_evidence is the additional report evidence block; it does not change allocation. The old local report could read an external archive; the 2026-10-17 release does not.",
+    "usage": [
+      "import json",
+      "from pathlib import Path",
+      "from reporting_interface import assign_from_request, write_agency_pdf",
+      "request = json.loads(Path('examples/example_reporting_request.json').read_text(encoding='utf-8'))",
+      "response = assign_from_request(request)",
+      "write_agency_pdf(response, 'private-output/example_agency_report.pdf')"
+    ],
+    "integration_notes": [
+      "Pass the complete object to reporting_interface.assign_from_request. assign_from_components does not accept scorecard_evidence; do not place the evidence inside options.",
+      "For each scored RN/PT, bind scorecard_evidence.clinicians by the exact clinician_id and discipline already in clinicians. The original metric values in both locations must agree after unit conversion.",
+      "All values use proportion units: 0.88 means 88%. Both the clinician metric_scale and each evidence record unit are explicit.",
+      "Supply at most one benchmark per scope and metric_key in a request. scope is national, state or organization; the example supplies all ten metrics for all three scopes.",
+      "Keep reporting_period, definition and applicable state_id compatible between personal records and benchmarks. Replace fictional source labels with real provenance when integrating actual data; metadata alone does not verify a source.",
+      "RN Demo 1 PPH is an explicit synthetic zero, displayed as 0%. RN Demo 3 Communications is intentionally null in both locations, displayed as missing even though its benchmark exists. Never replace missing observations with zero.",
+      "OT has no performance metrics or scorecard evidence because the current model assigns OT without performance scoring.",
+      "report_demo_synthetic and metadata are example annotations, not new required allocation inputs. Remove the synthetic flag only when all demonstration data has been replaced with appropriately sourced real data."
+    ]
+  }
+}
