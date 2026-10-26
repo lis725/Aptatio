@@ -5,7 +5,6 @@ optional developer images. A failed build cannot leave a partial target PDF.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
 from html import escape
 import math
 import os
@@ -136,9 +135,6 @@ def _option_label(option):
 
 
 
-def _model_label(provenance):
-    scope = provenance.get('model_scope', {})
-    return ' / '.join(str(v) for v in (scope.get('cms_model'), scope.get('measure_set_version')) if v) or 'Not recorded'
 
 
 
@@ -223,7 +219,7 @@ def _scorecard_table(card, styles):
     return _table(headers,data,widths,styles,small_padding=True)
 
 
-def _sponsor_story(response, generated_at, styles, *, option_rank=None):
+def _sponsor_story(response, styles, *, option_rank=None):
     """Render the shared content contract; no allocation or narrative recomputation."""
     from hhvbp_report_content import get_agency_report_view
     from hhvbp_distribution_chart import build_chart_drawing
@@ -231,10 +227,8 @@ def _sponsor_story(response, generated_at, styles, *, option_rank=None):
     styles=dict(styles)
     styles['body']=ParagraphStyle('AgencyCompactBody',parent=styles['body'],spaceAfter=4,allowWidows=0)
     shared=view.get('shared');options=view['options']
-    provenance=response['distribution_explanation'].get('provenance',{})
     title='Patient assignment report' if view['view_kind']=='combined' else 'Patient assignment report - option '+str(option_rank)
-    story=[_p(title,styles,'title'),_p(f"Request ID: {response.get('request_id') or 'Not supplied'}\n"
-           f"Generated: {generated_at}  |  Model: {_model_label(provenance)}",styles,'small')]
+    story=[_p(title,styles,'title')]
     if shared:
         position=shared.get('patient_distribution',{})
         presentation=response['distribution_explanation'].get('presentation',{})
@@ -266,12 +260,6 @@ def _sponsor_story(response, generated_at, styles, *, option_rank=None):
         story.append(_factor_table(shared,styles))
         legend=shared.get('factor_interpretations',{}).get('legend')
         if legend:story.append(_p(legend,styles,'small'))
-    # A brief, shared qualification also travels with independently opened options.
-    notes=([shared['scorecard_scope_note']] if shared and shared.get('scorecard_scope_note') else
-           list(dict.fromkeys(card.get('scorecard',{}).get('scope_note','')
-           for option in options for card in option.get('team',{}).values())))
-    for note in notes:
-        if note:story.append(_p(note,styles,'small'))
     story.append(_p('Returned assignment options' if option_rank is None else 'Selected report option',styles,'section'))
     if not options:
         story.append(_p('No assignment options were requested or returned.',styles))
@@ -304,7 +292,6 @@ def write_distribution_pdf(response: dict, output_path: str | Path, *, option_ra
     """
     target = Path(output_path).resolve()
     target.parent.mkdir(parents=True, exist_ok=True)
-    generated_at = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     styles = _styles()
     regular, _ = report_fonts()
     decision_id = str(response.get('decision_id', 'Not recorded'))
@@ -328,7 +315,7 @@ def write_distribution_pdf(response: dict, output_path: str | Path, *, option_ra
             canvas.drawRightString(PAGE_WIDTH - MARGIN, 17, f'Page {doc.page}')
             canvas.restoreState()
 
-        story = _sponsor_story(response, generated_at, styles, option_rank=option_rank)
+        story = _sponsor_story(response, styles, option_rank=option_rank)
         document.build(story, onFirstPage=footer, onLaterPages=footer)
         os.replace(temporary, target)
     finally:
